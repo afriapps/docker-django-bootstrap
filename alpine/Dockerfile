@@ -2,7 +2,7 @@ FROM praekeltfoundation/python-base:alpine
 MAINTAINER Praekelt Foundation <dev@praekeltfoundation.org>
 
 # Install libpq for PostgreSQL support and Nginx to serve everything
-RUN apk --no-cache add libpq nginx
+RUN apk --no-cache add libpq nginx libmysqlclient-dev
 
 # Install gunicorn
 COPY ./requirements.txt /requirements.txt
